@@ -1,0 +1,53 @@
+  @media screen and (min-width: 768px) {
+
+    /* PC端 */
+    #v1 {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+
+    /* 移动端 */
+    #v1 {
+      font-size: 30px;
+      width: 100%;
+      height: auto;
+      transform: rotate(90deg);
+      /* 将视频旋转为横屏显示效果 */
+      transform-origin: center center;
+      /* 设置视频旋转中心 */
+    }
+
+    @media only screen and (max-width: 767px) {
+      .one {
+        transform: rotate(-90deg);
+        position: absolute;
+        left: 20%;
+        top: 50%;
+        margin-top: -0.5em;
+      }
+      .two{
+        transform: rotate(-90deg);
+        position: absolute;
+        left: 10%;
+        top: 50%;
+      }
+    }
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -9999;
+  }
