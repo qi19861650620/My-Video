@@ -10,7 +10,7 @@
   @media screen and (max-width: 767px) {
 
     /* 移动端 */
-    #v1 {
+    /*#v1 {
       font-size: 30px;
       width: 100%;
       height: auto;
@@ -19,6 +19,23 @@
       transform-origin: center center;
       /* 设置视频旋转中心 */
     }
+
+@media only screen and (max-width: 767px) {
+      .one {
+        transform: rotate(-90deg);
+        position: absolute;
+        left: 20%;
+        top: 50%;
+        margin-top: -0.5em;
+      }
+      .two{
+        transform: rotate(-90deg);
+        position: absolute;
+        left: 10%;
+        top: 50%;
+      }
+    }
+}*/
 
     
 
