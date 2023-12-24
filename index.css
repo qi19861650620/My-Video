@@ -1,0 +1,157 @@
+/* 初始化 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 为 body 设置背景图片 */
+body {
+    height: 100%;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(125deg, #2c3e50, #27ae60, #2980b9, #e74c3c, #8e44ad, #2c3e50);
+    background-size: 500%;
+    overflow: hidden;
+    animation: bgAnimation 10s linear infinite;
+    /* overflow: hidden; */
+    /* 溢出隐藏 */
+    font-family: Arial, Helvetica, sans-serif; /* 定义字体，避免出现乱码 */
+}
+
+/*定义背景动画*/
+@keyframes bgAnimation {
+    0% {
+        background-position: 0% 100%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+
+/* 顶部区域样式 */
+header {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background: rgba(72, 25, 64, 0.411);
+    width: 100%;
+}
+
+header img {
+    margin-top: 20px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+}
+
+header h2 {
+    color: rgba(51, 0, 51, 0.817);
+    font-size: 30px;
+    font-weight: 1000;
+}
+
+header hr {
+    margin-top: 20px;
+    height: 10px;
+    background: rgba(63, 31, 31, 0.596);
+    padding: 0 auto;
+}
+
+/* 导航栏样式 */
+nav {
+    margin: 0 auto; /* 居中对齐 */
+    width: 80%; /* 设定宽度，避免在大屏幕上太宽而在小屏幕上不够宽 */
+    background-color: rgba(51, 0, 51, 0);
+    clear: both;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;          /*使用 flex 布局*/
+    flex-wrap: wrap;            /*当屏幕过小时可以折行*/
+    /* justify-content: space-around; 居中对齐 */
+    padding: 0;
+}
+
+nav li {
+    text-align: center;
+    height: 10%;
+    width: 20%;
+    margin-bottom: 10px; /* 给导航栏选项之间以及上下留白 */
+}
+
+nav a {
+    display: block;
+    background-color: #4d41357d;
+    border-top: 1.5px solid whitesmoke;
+    border-bottom: 1.5px solid whitesmoke;
+    border-right: 1.5px solid whitesmoke;
+    border-left: 1.5px solid whitesmoke;
+    line-height: 2.5em;
+    padding: 8px 14px;
+    color: #ecf9ff;
+    font-weight: normal;
+    font-size: 0.8em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.2s ease; /* 添加过渡效果 */
+}
+
+/* 鼠标悬停样式 */
+nav a:hover {
+    color: #000;
+    background-color: #3356651d;
+}
+
+/* 给被选中的选项添加样式 */
+nav a.active, nav a:active {
+    color: white;
+    background-color: #a88b707b;
+}
+
+/* 在宽屏幕上隐藏登录注册按钮 */
+@media screen and (min-width: 768px) {
+    nav li:last-child {
+        display: none; /* 隐藏最后一个选项 */
+    }
+}
+
+/* 当屏幕宽度小于 768px 时应用的样式 */
+@media (max-width: 767px) {
+    /* 调整顶部区域的样式 */
+    .top {
+        margin-top: 10%;
+    }
+    .top img {
+        margin-top: 20px;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+    }
+    .top h2 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .top hr {
+        margin-top: 10px;
+        height: 5px;
+    }
+
+    /* 调整导航栏的样式 */
+    nav ul {
+        /* flex-direction: column; */
+        align-items: center;
+    }
+    nav li {
+        height: auto;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    nav a {
+        font-size: 1.2em;
+        padding: 10px 14px;
+        border-radius: 10px;
+    }
+}
