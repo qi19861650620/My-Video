@@ -20,22 +20,7 @@
       /* 设置视频旋转中心 */
     }
 
-    @media only screen and (max-width: 767px) {
-      .one {
-        transform: rotate(-90deg);
-        position: absolute;
-        left: 20%;
-        top: 50%;
-        margin-top: -0.5em;
-      }
-      .two{
-        transform: rotate(-90deg);
-        position: absolute;
-        left: 10%;
-        top: 50%;
-      }
-    }
-  }
+    
 
   * {
     margin: 0;
